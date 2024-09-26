@@ -1,0 +1,5 @@
+start locator --name=locator1 --properties-file=gemfire.properties --enable-cluster-configuration=false --port=10334 --http-service-port=7070 --J=-Dgemfire.jmx-manager-port=1091
+
+start server --name=server1 --log-level=fine --properties-file=gemfire.properties --use-cluster-configuration=false --cache-xml-file=/Users/bakera/working/ubs/test/cluster1/cache-1.xml --disable-default-server=true
+start server --name=server3 --log-level=fine --properties-file=gemfire.properties --use-cluster-configuration=false --cache-xml-file=/Users/bakera/working/ubs/test/cluster1/cache-3.xml --disable-default-server=true
+

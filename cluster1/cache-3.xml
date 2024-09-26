@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cache
+    xmlns="http://geode.apache.org/schema/cache"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://geode.apache.org/schema/cache http://geode.apache.org/schema/cache/cache-1.0.xsd"
+    version="1.0">
+
+  <gateway-sender 
+    id="cluster1-server3" 
+    parallel="false"
+    remote-distributed-system-id="2"
+  />
+  
+  <region name="example-region">
+    <region-attributes gateway-sender-ids="cluster1-server3" data-policy="empty" scope="distributed-ack">
+      <subscription-attributes interest-policy="all" />
+    </region-attributes>
+  </region>
+</cache>
